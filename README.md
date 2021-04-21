@@ -129,8 +129,13 @@ plt.figure(figsize=(15,15))
 sns.barplot(xlabel, ylabel, data=df, palette="Paired").set_title(title)
 ```
 
-![](https://github.com/SaiGorla/big-data-project-gorla/blob/main/Data%20Visualized.PNG)
+## Results
+![](https://github.com/neeleshsaladi/BigData-Final-Project/blob/main/b4fc1621-8e57-4b67-83c1-01008eb39b73.png)
+
+![](https://github.com/neeleshsaladi/BigData-Final-Project/blob/main/c5d84b5c-3199-49bc-a961-8769000a26e6.png)
 
 
 ## References :
 - [MatplotLib](https://matplotlib.org/stable/tutorials/introductory/sample_plots.html)
+- https://www.w3schools.com/python/python_lambda.asp
+- https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3328674740105987/4033840715400609/6441317451288404/latest.html
