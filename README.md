@@ -91,6 +91,44 @@ plt.ylabel("Most repeated words")
 plt.title("Most used words in the File")
 plt.show()
 ```
+
+- Sorting the words in the descending order and printing the results to check the first 25 results in descending order.
+
+```
+final_results = Final_word_count_RDD.map(lambda x: (x[1], x[0])).sortByKey(False).take(25)
+print(final_results)
+```
+- collect() action to get back to python
+
+```
+results = Final_word_count_RDD.collect()
+print(results)
+```
+## Charting the results:
+
+- We use pandas, matplotlib seaborn to chart the results.
+
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from collections import Counter
+
+source = 'The Project Gutenberg eBook of The Wonderful Wizard of Oz, by L. Frank Baum'
+title = 'Top Words in ' + source
+xlabel = 'Count'
+ylabel = 'Words'
+
+# create Pandas dataframe from list of tuples
+df = pd.DataFrame.from_records(final_results, columns =[xlabel, ylabel]) 
+print(df)
+
+# create plot (using matplotlib)
+plt.figure(figsize=(15,15))
+sns.barplot(xlabel, ylabel, data=df, palette="Paired").set_title(title)
+```
+
 ![](https://github.com/SaiGorla/big-data-project-gorla/blob/main/Data%20Visualized.PNG)
 
 
